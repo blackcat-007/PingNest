@@ -17,7 +17,7 @@ const __dirname = path.resolve();
 app.use(express.json());
 app.use(cookiesParser());
 app.use(cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:5173",  // Update for production
+    origin: "http://localhost:5173",  // Update for production
     credentials: true,
 }));
 
