@@ -18,7 +18,17 @@ const ChatContainer = () => {
   } = useChatStore();
   const { authUser } = useAuthStore();
   const messageEndRef = useRef(null);
-
+  const contextStyles = {
+    normal: "bg-teal-500 text-white",
+    formal: "bg-blue-600 text-white",
+    sarcasm: "bg-yellow-500 text-black",
+    angry: "bg-red-600 text-white",
+    interrogation: "bg-indigo-950 text-white",
+    serious: "bg-amber-800 text-black ",
+    happy: "bg-orange-500 text-white",
+    tease: "bg-pink-700 text-white",
+    emotional: "bg-zinc-800 text-white",
+  };
   useEffect(() => {
     getMessages(selectedUser._id);
 
@@ -71,7 +81,8 @@ const ChatContainer = () => {
                 {formatMessageTime(message.createdAt)}
               </time>
             </div>
-            <div className="chat-bubble flex flex-col">
+            <div className={`chat-bubble flex flex-col ${contextStyles[message.context]}`}>
+              <p className="text-xs text-gray-700 bg-white/30 backdrop-blur-sm rounded px-1 py-0.5 inline-block">{message.context}</p>
               {message.image && (
                 <img
                   src={message.image}

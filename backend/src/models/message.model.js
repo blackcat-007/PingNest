@@ -18,7 +18,22 @@ const messageSchema= new mongoose.Schema(
         image:{
             type:String,
             
-        }
+        },
+        context: {  // ✅ New field for message context
+            type: String,
+            enum: [
+              "formal",
+              "sarcasm",
+              "normal",
+              "angry",
+              "interrogation",
+              "serious",
+              "happy",
+              "tease",
+              "emotional",
+            ],
+            default: "normal",
+          },
 
     },
     {timestamps:true}

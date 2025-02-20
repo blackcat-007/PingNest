@@ -1,14 +1,14 @@
-import express from "express";
-import dotenv from "dotenv";
-import authRoutes from "./routes/auth.route.js";
-import messageRoutes from "./routes/message.route.js";
-import { connectDB } from "./lib/db.js";
-import cookiesParser from "cookie-parser";
-import cors from "cors";
-import { app, server } from "./lib/socket.js";
-import path from "path";
+import express from "express";//express framework
+import dotenv from "dotenv";//dotenv object instance from dotenv class
+import authRoutes from "./routes/auth.route.js";//getting authroutes function from route folder
+import messageRoutes from "./routes/message.route.js";//getting messageroutes function from route folder
+import { connectDB } from "./lib/db.js";//getting connectdb function from lib folder 
+import cookiesParser from "cookie-parser";//cookieparser function from cookie-parser module
+import cors from "cors";//cors function from cors module
+import { app, server } from "./lib/socket.js";//getting app and server object instance from lib folder 
+import path from "path";//path function from path folder 
 
-dotenv.config();
+dotenv.config();//loads enviroment variables from .env file
 
 const PORT = process.env.PORT || 5001;
 const __dirname = path.resolve();
