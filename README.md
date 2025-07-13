@@ -144,9 +144,9 @@ npm run dev
 
 <hr />
 
-<h2>📄 License</h2>
+## License
 
-<p>This project is licensed under the <strong>MIT License</strong>. See the <a href="LICENSE">LICENSE</a> file for details.</p>
+This project is released into the public domain. See the [LICENSE](LICENSE.md) file for details.
 
 <hr />
 
