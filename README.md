@@ -144,9 +144,8 @@ npm run dev
 
 <hr />
 
-## License
-
-This project is released into the public domain. See the [LICENSE](LICENSE.md) file for details.
+## 📜 License
+PingNest is licensed under the [Business Source License 1.1](LICENSE) — source available for personal and academic use only. Commercial use is prohibited until July 14, 2028.
 
 <hr />
 
